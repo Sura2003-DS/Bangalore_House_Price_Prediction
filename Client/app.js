@@ -1,4 +1,3 @@
-// Get selected number of bathrooms
 function getBathValue() {
     var uiBathrooms = document.getElementsByName("uiBathrooms");
     for (var i = 0; i < uiBathrooms.length; i++) {
@@ -9,7 +8,6 @@ function getBathValue() {
     return -1;
 }
 
-// Get selected BHK value
 function getBHKValue() {
     var uiBHK = document.getElementsByName("uiBHK");
     for (var i = 0; i < uiBHK.length; i++) {
@@ -20,7 +18,6 @@ function getBHKValue() {
     return -1;
 }
 
-// Handle Estimate Price button click
 function onClickedEstimatePrice() {
     console.log("Estimate price button clicked");
 
@@ -71,7 +68,6 @@ function onClickedEstimatePrice() {
     });
 }
 
-// Populate location dropdown on page load
 function onPageLoad() {
     console.log("Document loaded");
 
@@ -95,5 +91,4 @@ function onPageLoad() {
     });
 }
 
-// Run on page load
 window.onload = onPageLoad;
