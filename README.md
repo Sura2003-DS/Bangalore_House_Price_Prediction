@@ -35,13 +35,23 @@ The project workflow includes:
 
 ## Key Files and Folders
 
-- `client/` – Frontend files (HTML, CSS, JS)  
-- `data/` – Raw and cleaned datasets  
-- `server/` – Backend scripts for model training and API  
-- `artifacts/` – Saved models  
-- `website_images/` – Images for the website  
-- `Bangalore_House_Data.ipynb` – Notebook for data cleaning and exploration  
-- `requirements.txt` – Python dependencies  
+Bangalore_House_Price_Prediction/
+├── client/                  # Frontend files
+│   ├── app.html
+│   ├── app.css
+│   └── app.js
+├── data/                    # Dataset files
+│   ├── raw_data.csv
+│   └── cleaned_data.csv
+├── server/                  # Backend scripts
+│   ├── server.py
+│   └── util.py
+├── website_images/          # Images for the website
+│   └── homepage.png
+├── Bangalore_House_Data.ipynb  # Notebook for data cleaning and exploration
+├── requirements.txt         # Python dependencies
+└── README.md                # Project documentation
+ 
 
 ## How It Works
 
