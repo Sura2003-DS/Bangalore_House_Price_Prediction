@@ -33,26 +33,15 @@ The project workflow includes:
 - **Frontend:** HTML, CSS, JavaScript  
 - **Machine Learning Algorithm:** Linear Regression  
 
-## Project Structure
+## Key Files and Folders
 
-Bengaluru_House_Prediction/
-├── client/                  # Frontend files
-│   ├── app.html
-│   ├── app.css
-│   └── app.js
-├── data/                    # Dataset files
-│   ├── raw_data.csv
-│   └── cleaned_data.csv
-├── server/                  # Backend scripts
-│   ├── server.py
-│   └── util.py
-├── artifacts/               # Trained model and related files
-├── **pycache**/             # Python cache files
-├── website_images/          # Images for the website
-│   └── homepage.png
-├── Bangalore_House_Data.ipynb  # Notebook for data cleaning and exploration
-├── requirements.txt         # Python dependencies
-└── README.md                # Project documentation
+- `client/` – Frontend files (HTML, CSS, JS)  
+- `data/` – Raw and cleaned datasets  
+- `server/` – Backend scripts for model training and API  
+- `artifacts/` – Saved models  
+- `website_images/` – Images for the website  
+- `Bangalore_House_Data.ipynb` – Notebook for data cleaning and exploration  
+- `requirements.txt` – Python dependencies  
 
 ## How It Works
 
