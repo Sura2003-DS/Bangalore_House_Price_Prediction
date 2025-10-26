@@ -8,11 +8,6 @@ __locations = None
 __model = None
 
 def load_saved_artifacts():
-    """
-    Load the model and column information from artifacts.
-    Assumes first 3 columns are numeric: total_sqft, bath, bhk.
-    All remaining columns are treated as location names.
-    """
     global __data_columns
     global __locations
     global __model
@@ -22,12 +17,11 @@ def load_saved_artifacts():
     columns_path = r"C:\Users\HP\Bengaluru_House_Data\Bangalore_House_Price\artifacts\columns.json"
     model_path = r"C:\Users\HP\Bengaluru_House_Data\Bangalore_House_Price\artifacts\model.pkl"
 
-    # Load columns
     with open(columns_path, "r", encoding='utf-8') as f:
         data = json.load(f)
         __data_columns = data.get("data_columns") or data.get("columns") or data
 
-    # Locations are all columns after first 3 numeric columns
+    # Locations are all columns after first 3 numeric column
     __locations = __data_columns[3:]
 
     # Load model
@@ -40,18 +34,12 @@ def load_saved_artifacts():
 
 
 def get_location_names():
-    """
-    Return the list of all locations for populating dropdown.
-    """
     if __locations is None:
         return []
     return __locations
 
 
 def get_estimated_price(location, total_sqft, bhk, bath):
-    """
-    Predict the home price given location, total_sqft, bhk, and bath.
-    """
     if __data_columns is None or __model is None:
         raise Exception("Artifacts not loaded. Please call load_saved_artifacts() first.")
 
